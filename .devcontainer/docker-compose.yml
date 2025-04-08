@@ -1,0 +1,23 @@
+services:
+
+  app:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    image: peter/portfolio:beta
+    pull_policy: never
+    container_name: portfolio
+    ports:
+      - "5173:5173"
+    volumes:
+      - ..:/workspace
+      - /workspace/node_modules
+    networks:
+      - personal
+    mem_limit: 4G # Limite máximo de memória
+    cpus: 4 # Limite máximo de cpu
+  
+networks:
+  personal:
+    external: true
+    driver: bridge

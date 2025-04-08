@@ -1,0 +1,25 @@
+{
+    "name": "Portfolio",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspace",
+    "shutdownAction": "stopCompose",
+    "mounts": [
+        "source=${env:HOME}/.gitconfig,target=/home/node/.gitconfig,type=bind",
+        "source=${env:HOME}/.ssh,target=/home/node/.ssh,type=bind"
+    ],
+    "postCreateCommand": "sh .devcontainer/post-create.sh",
+    "overrideCommand": true,
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "Google.geminicodeassist",
+                "usernamehw.errorlens",
+                "formulahendry.auto-close-tag",
+                "formulahendry.auto-rename-tag",
+                "esbenp.prettier-vscode",
+                "dbaeumer.vscode-eslint"
+            ]
+        }
+    }
+}
