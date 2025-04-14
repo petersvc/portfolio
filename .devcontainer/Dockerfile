@@ -6,7 +6,7 @@ COPY . .
 
 RUN apt-get update && apt install nano curl git -y && \
     rm -rf /var/lib/apt/lists/* && \
-    npm i -g pnpm && pnpm i && \
+    npm i -g pnpm && pnpm install && \
     chown -R 1000:1000 /workspace /usr/bin /usr/local/bin
 
 USER 1000
