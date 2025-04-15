@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Navigation from './navigation/Navigation';
+import { Box, Pyramid } from 'lucide-react';
 
 export default function Header() {
   const [time, setTime] = useState('');
@@ -25,7 +26,7 @@ export default function Header() {
         timeZone: 'America/Sao_Paulo',
       }).format(now);
       setTime(brTime);
-    };
+    }
 
     updateTime();
 
@@ -36,16 +37,14 @@ export default function Header() {
 
   return (
     <>
-      <section className="h-[6vh] grid grid-cols-3 justify-between items-center px-28 bg-amber-9000 border-b border-dashed border-b-neutral-900">
-        <h1 className="font-extralight text-xs text-neutral-300 bg-amber-4000">
-          PETER_COSTA <span className="ml-2 font-[Roboto] text-neutral-400">{time}</span>
-        </h1>
+      <section className="h-[10vh] grid grid-cols-3 justify-between items-center px-28 pt-12 bg-amber-9000 border-bs border-dashed border-b-neutral-800/50">
+        <div className="flex justify-start items-center font-extralight text-xs text-neutral-600 bg-amber-4000">
+          <h2 className="text-neutral-500 mr-2"><Pyramid size={14} /></h2>
+          <h2>PETER_COSTA</h2>
+          <h2 className="ml-2 font-[Roboto] text-neutral-600">{time}</h2>
+        </div>
         <div className="flex gap-2 justify-center items-center bg-sky-7000 ">
-          {/* <div className="w-5 h-5 bg-transparent rounded-full border border-neutral-500 invisible" />
-          <div className="w-5 h-5 bg-neutral-400 rounded-full border border-neutral-400 invisible" /> */}
-          <span className="font-extralight text-xs text-neutral-300">
-            /{getPage(page)}
-          </span>
+          <h2 className="font-extralight text-xs text-neutral-300">/{getPage(page)}</h2>
         </div>
         <div className="flex justify-end items-center bg-neutral-7000 h-full">
           <Navigation />

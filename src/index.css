@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Bungee+Hairline&family=Karantina:wght@300;400;700&family=Monoton&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Dirt&family=Tilt+Prism&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Zen+Tokyo+Zoo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -43,8 +43,21 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+h2, h3 {
+  font-family: "Roboto Condensed", sans-serif;
+  
+}
+
+h2 {
+  font-weight: bold;
+}
+
+h3 {
+  font-weight: light;
+}
+
 :root {
-  font-family: "Titillium Web", sans-serif;
+  font-family: "Roboto", sans-serif;
   --radius: 0.5rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
@@ -80,7 +93,7 @@
 }
 
 .dark {
-  --background: oklch(0.141 0.005 285.823);
+  --background: oklch(0.180 0.005 285.823);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.21 0.006 285.885);
   --card-foreground: oklch(0.985 0 0);
