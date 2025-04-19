@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Navigation from './navigation/Navigation';
-import { Box, Pyramid } from 'lucide-react';
+import { Pyramid } from 'lucide-react';
 
 export default function Header() {
   const [time, setTime] = useState('');
@@ -44,7 +44,7 @@ export default function Header() {
           <h2 className="ml-2 font-[Roboto] text-neutral-600">{time}</h2>
         </div>
         <div className="flex gap-2 justify-center items-center bg-sky-7000 ">
-          <h2 className="font-extralight text-xs text-neutral-300">/{getPage(page)}</h2>
+          <h2 className="font-extralight text-sm text-neutral-300">/{getPage(page)}</h2>
         </div>
         <div className="flex justify-end items-center bg-neutral-7000 h-full">
           <Navigation />
